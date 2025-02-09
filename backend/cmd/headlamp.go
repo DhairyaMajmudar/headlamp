@@ -891,7 +891,7 @@ func (c *HeadlampConfig) OIDCTokenRefreshMiddleware(next http.Handler) http.Hand
 		}
 		if newToken != nil {
 			w.Header().Set("X-Authorization", newToken.AccessToken)
-		}
+		} sumit
 		next.ServeHTTP(w, r)
 	})
 }
